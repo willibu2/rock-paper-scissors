@@ -1,0 +1,18 @@
+.main {
+  width: max-content;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  row-gap: 5rem;
+  column-gap: 5rem;
+  position: relative;
+}
+
+.third-btn {
+  grid-column: 1 / 3;
+  justify-self: center;
+}
+
+.btn:hover {
+  background-color: #fff;
+}

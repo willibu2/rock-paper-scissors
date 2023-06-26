@@ -1,0 +1,36 @@
+.rules-btn {
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 1.5px #fff solid;
+  border-radius: 0.7rem;
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  color: inherit;
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  /* font-weight: 700; */
+}
+
+.rules-btn:hover {
+  background-color: #fff;
+  color: hsl(214, 47%, 23%);
+}
+
+@media (max-width: 550px) {
+  .rules-btn {
+    right: 50%;
+    bottom: 2%;
+    transform: translate(50%);
+    /* display: block;
+    position: relative;
+    margin: 1rem auto 7rem auto;
+    margin-top: 7rem;
+    transform: translateX(10%); */
+
+    font-size: 3rem;
+    padding: 2rem 6rem;
+  }
+}

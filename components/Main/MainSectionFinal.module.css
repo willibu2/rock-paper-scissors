@@ -1,0 +1,159 @@
+.main {
+  width: max-content;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  row-gap: 10rem;
+  column-gap: 10rem;
+  position: relative;
+  justify-items: center;
+  align-items: center;
+}
+
+.small-heading {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.result-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: max-content;
+  grid-column: 2/3;
+
+  animation: appearSlowly 1.5s ease-in;
+}
+
+.result-text {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.play-again-btn {
+  width: 100%;
+  padding: 1.5rem 5rem;
+  font-family: inherit;
+  color: hsl(229, 25%, 31%);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.play-again-btn:hover {
+  background-color: #ddd;
+}
+
+.left-btn {
+  grid-column: 1/2;
+  animation: moveInLeft 2s;
+}
+
+.right-btn {
+  animation: moveInRight 2s;
+}
+
+.house {
+  grid-column: 3/4;
+}
+
+/* ANIMATIONS */
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(80%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(-80%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appearSlowly {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  .main {
+    column-gap: 5rem;
+    row-gap: 5rem;
+  }
+
+  .result-container {
+    grid-column: 1 / -1;
+  }
+
+  .right-btn {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  .result-text {
+    font-size: 7rem;
+  }
+
+  .play-again-btn {
+    padding: 2rem 8rem;
+    font-size: 2rem;
+  }
+
+  .left-btn {
+    animation: none;
+  }
+
+  .right-btn {
+    animation: appearSlowly 1.5s ease-in;
+  }
+}
+
+@media (max-width: 550px) {
+  .left-btn {
+    grid-row: 1/2;
+  }
+
+  .right-btn {
+    grid-row: 1/2;
+  }
+
+  .you {
+    grid-row: 2/3;
+  }
+
+  .house {
+    align-self: start;
+  }
+
+  .result-text {
+    font-size: 10rem;
+  }
+
+  .play-again-btn {
+    padding: 3rem 10rem;
+    font-size: 3rem;
+  }
+}

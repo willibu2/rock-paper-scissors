@@ -1,0 +1,36 @@
+import classes from './Overlay.module.css';
+import Image from 'next/image';
+import { useRulesContext } from '../store/rules-context';
+
+const Overlay = (props) => {
+  const rulesCtx = useRulesContext();
+
+  return (
+    <>
+      <div className={classes.overlay}>
+        <h2 className={classes.h2}>rules</h2>
+        <Image
+          onClick={rulesCtx.closeModalHandler}
+          alt="close icon"
+          className={classes['close-icon']}
+          src="/images/icon-close.svg"
+          width={25}
+          height={25}
+        />
+        <Image
+          alt="rules image"
+          className={classes['img-rules']}
+          src="/images/image-rules.svg"
+          width={2}
+          height={2}
+        />
+      </div>
+      <div
+        className={classes.backdrop}
+        onClick={rulesCtx.closeModalHandler}
+      ></div>
+    </>
+  );
+};
+
+export default Overlay;
