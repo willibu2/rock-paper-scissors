@@ -1,0 +1,15 @@
+.switch-container {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 550px) {
+  .switch-container {
+    right: 50%;
+    bottom: 2%;
+    transform: translate(50%);
+  }
+}

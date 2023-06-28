@@ -1,10 +1,10 @@
 import Scoreboard from './Scoreboard';
 import MainSection from './Main/MainSection';
-import RulesButton from './Buttons/RulesButton';
 import Overlay from './Overlay';
 import MainSectionFinal from './Main/MainSectionFinal';
 import { useRulesContext } from '../store/rules-context';
 import { useGameContext } from '../store/game-context';
+import SwitchContainer from './SwitchContainer';
 
 const WholeSetup = (props) => {
   const rulesCtx = useRulesContext();
@@ -17,7 +17,7 @@ const WholeSetup = (props) => {
       <Scoreboard />
       {!showFinal && <MainSection />}
       {showFinal && <MainSectionFinal />}
-      <RulesButton />
+      <SwitchContainer />
       {rulesCtx.showModal && <Overlay />}
     </>
   );

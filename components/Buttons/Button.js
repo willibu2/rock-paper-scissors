@@ -1,7 +1,9 @@
 import classes from './Button.module.css';
 import Image from 'next/image';
+import { useGameContext } from '../../store/game-context';
 
-const Button = ({ type, className, big, onClick }) => {
+const Button = ({ type, className, big }) => {
+  const gameCtx = useGameContext();
   const src = `/images/icon-${type}.svg`;
 
   let divClasses = `${classes['btn-container']} ${
@@ -17,6 +19,8 @@ const Button = ({ type, className, big, onClick }) => {
       classes[`${type}`]
     } ${className} ${classes['btn-container-big']}`;
   }
+
+  const onClick = big ? null : gameCtx.chooseHandler.bind(null, type);
 
   return (
     <div className={divClasses}>

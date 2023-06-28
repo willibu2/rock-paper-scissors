@@ -13,6 +13,47 @@
   justify-self: center;
 }
 
-.btn:hover {
-  background-color: #fff;
+/* BONUS */
+
+.main-bonus {
+  width: max-content;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* row-gap: 5rem; */
+  /* column-gap: 5rem; */
+  position: relative;
+}
+
+.scissors {
+  grid-column: 2/ 4;
+  justify-self: start;
+}
+
+.paper {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  margin-top: -3rem;
+}
+
+.spock {
+  grid-column: 1/2;
+  align-self: end;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+
+.rock {
+  grid-column: 2/4;
+  grid-row: 3/4;
+  justify-self: center;
+  margin-left: 5rem;
+}
+
+.lizard {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  justify-self: center;
+  margin-right: 5rem;
 }

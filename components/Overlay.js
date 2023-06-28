@@ -1,9 +1,15 @@
 import classes from './Overlay.module.css';
 import Image from 'next/image';
 import { useRulesContext } from '../store/rules-context';
+import { useGameContext } from '../store/game-context';
 
 const Overlay = (props) => {
   const rulesCtx = useRulesContext();
+  const gameCtx = useGameContext();
+
+  const imageSrc = gameCtx.gameState.advancedMode
+    ? '/images/image-rules-bonus.svg'
+    : '/images/image-rules.svg';
 
   return (
     <>
@@ -20,7 +26,7 @@ const Overlay = (props) => {
         <Image
           alt="rules image"
           className={classes['img-rules']}
-          src="/images/image-rules.svg"
+          src={imageSrc}
           width={2}
           height={2}
         />

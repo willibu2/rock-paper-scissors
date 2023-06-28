@@ -78,6 +78,22 @@
   );
 }
 
+.spock {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(189, 58%, 57%),
+    hsl(189, 59%, 53%)
+  );
+}
+
+.lizard {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(261, 72%, 63%),
+    hsl(261, 73%, 60%)
+  );
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0);
